@@ -332,8 +332,12 @@ If the number of saved \indexes is different than the number of tabs, the saved 
 ARGUMENT:: symbols
 symbol1, symbol2, symbol3, ...
 CODE::
-v=TabbedView2.newBasic.demo;
-v.autoArchive(\myProject, \mySection, \myTabbedViewName)
+v=TabbedView2.new;
+v.add("tab1"); // tab names must be unique
+v.add("tab2");
+v.add("tab3");
+// call autoArchive **after** adding the tabs;
+v.autoArchive(\myStorageProject, \myStorageSubsection, \myTabbedViewStorageName);
 ::
 
 METHOD:: archiveKeys
@@ -558,8 +562,11 @@ v.removeAt(2)
 SUBSECTION:: Auto-Archiving Tabs
 NOTE:: Does not support detached Tabs::
 CODE::
-v=TabbedView2.newTall.demo(3);
-b.autoArchive(\tabsDemo,\tabTest); // the Archive path to save to
+v.add("tab1"); // tab names must be unique
+v.add("tab2");
+v.add("tab3");
+// call autoArchive **after** adding the tabs;
+v.autoArchive(\myStorageProject, \myStorageSubsection, \myTabbedViewStorageName);
 // v's state will now be stored in the archive,
 // and will be restored if you execte the above code again.
 ::
