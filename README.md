@@ -1,4 +1,5 @@
-## TabbedView2
+# TabbedView2
+A Tabbed View which holds TabbedViewTabs
 
 
 ## <a class="anchor" name="description">Description</a>
