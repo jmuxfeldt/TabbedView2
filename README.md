@@ -245,37 +245,16 @@ create a Tabbed View
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">parent</td>
-
-<td class="argumentdesc">
+| parent | 
 
 a parent view. if nil, then a new window is created
 
-</td>
-
-</tr>
-
-<tr>
-
-<td class="argumentname">bounds</td>
-
-<td class="argumentdesc">
+ |
+| bounds | 
 
 Rect . if nil then the parent Rect is used
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 #### Returns:
 
@@ -332,25 +311,11 @@ the container for all the views
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">(boolean)</td>
-
-<td class="argumentdesc">
+| (boolean) | 
 
 If a window was created automatically, then this sets whether it is always on top.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -414,49 +379,21 @@ Creates a new TabbedView2, copying all of the settings of the current on, other 
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">parent</td>
-
-<td class="argumentdesc">
+| parent | 
 
 a parent view. if none, a new window is created.
 
-</td>
-
-</tr>
-
-<tr>
-
-<td class="argumentname">x</td>
-
-<td class="argumentdesc">
+ |
+| x | 
 
 If a new window is created, it will be created offset from this x position by 20px (mainly for internal use)
 
-</td>
-
-</tr>
-
-<tr>
-
-<td class="argumentname">y</td>
-
-<td class="argumentdesc">
+ |
+| y | 
 
 If a new window is created, it will be created offset from this y position by 20px (mainly for internal use)
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 #### Returns:
 
@@ -484,49 +421,21 @@ adds a TabbedViewTab instance
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">label</td>
-
-<td class="argumentdesc">
+| label | 
 
 string, the label
 
-</td>
-
-</tr>
-
-<tr>
-
-<td class="argumentname">index</td>
-
-<td class="argumentdesc">
+ |
+| index | 
 
 int, (optional) the index at which the tab is inserted (if nil, add to the end)
 
-</td>
-
-</tr>
-
-<tr>
-
-<td class="argumentname">scroll</td>
-
-<td class="argumentdesc">
+ |
+| scroll | 
 
 Boolean, default false. Must be set before creation of tab.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 #### Returns:
 
@@ -546,49 +455,21 @@ inserts a TabbedViewTab instance at index
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">index</td>
-
-<td class="argumentdesc">
+| index | 
 
 the index at which the tab is inserted
 
-</td>
-
-</tr>
-
-<tr>
-
-<td class="argumentname">label</td>
-
-<td class="argumentdesc">
+ |
+| label | 
 
 (describe argument here)
 
-</td>
-
-</tr>
-
-<tr>
-
-<td class="argumentname">scroll</td>
-
-<td class="argumentdesc">
+ |
+| scroll | 
 
 Boolean, default false. Must be set before creation of tab.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 #### Returns:
 
@@ -630,25 +511,8 @@ quickly creates a bunch of tabs. for texting TabbedView2 settings Tab labels wil
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">i</td>
-
-</tr>
-
-<tr>
-
-<td class="argumentname">string</td>
-
-</tr>
-
-</tbody>
-
-</table>
+| i |
+| string |
 
 </div>
 
@@ -660,25 +524,11 @@ remove tab at Index
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">index</td>
-
-<td class="argumentdesc">
+| index | 
 
 the index of the tab to be removed
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -690,25 +540,11 @@ selects one of the tabs
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">index</td>
-
-<td class="argumentdesc">
+| index | 
 
 int, the index to focus
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -738,25 +574,11 @@ returns the focused tab
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">symbol</td>
-
-<td class="argumentdesc">
+| symbol | 
 
 \left, \top, \right, or \bottom.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -770,25 +592,11 @@ Lockes the \left, \top, \right, or \bottom position of the tabs. You still can c
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">(bool)</td>
-
-<td class="argumentdesc">
+| (bool) | 
 
 default false.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -812,25 +620,11 @@ Prevents Double-Click changing of followEdges.
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">(bool)</td>
-
-<td class="argumentdesc">
+| (bool) | 
 
 default false.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -879,15 +673,7 @@ Automatically saves the state of the TabbedView2 to given path in the Archive.
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">symbols</td>
-
-<td class="argumentdesc">
+| symbols | 
 
 symbol1, symbol2, symbol3, ...
 
@@ -898,13 +684,7 @@ v.add("tab3");
 // call autoArchive **after** adding the tabs;
 v.autoArchive(\myStorageProject, \myStorageSubsection, \myTabbedViewStorageName);</pre>
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -920,25 +700,11 @@ Array: Determines which keys will be archived when autoArchive is enabled.
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">(array)</td>
-
-<td class="argumentdesc">
+| (array) | 
 
 Array of Symbols, may include only `[\indexes, \followEdges, \tabPosition, \tabFocus]`
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -950,25 +716,11 @@ Saves the state of the TabbedView2 to given path in the Archive.
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">symbols</td>
-
-<td class="argumentdesc">
+| symbols | 
 
 symbol1, symbol2, symbol3, ...
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -982,25 +734,11 @@ Restores the state of the TabbedView2 from given path in the Archive.
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">symbols</td>
-
-<td class="argumentdesc">
+| symbols | 
 
 symbol1, symbol2, symbol3, ...
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1026,25 +764,11 @@ reset the tab colors, cycling through default color arrays.
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">colorArray</td>
-
-<td class="argumentdesc">
+| colorArray | 
 
 Array of Colors sets the default colors of the tab widgets. New tabs will cycle through these colors, though these can be overridden in the TabbedViewTab instance.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1056,25 +780,11 @@ Array of Colors sets the default colors of the tab widgets. New tabs will cycle 
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">colorArray</td>
-
-<td class="argumentdesc">
+| colorArray | 
 
 Array of Colors sets the default unfocusedColors colors of the tab widgets. New tabs will cycle through these colors, though these can be overridden in the TabbedViewTab instance.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1086,25 +796,11 @@ Array of Colors sets the default unfocusedColors colors of the tab widgets. New 
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">colorArray</td>
-
-<td class="argumentdesc">
+| colorArray | 
 
 Array of Colors sets the default background colors of the Composite/Scroll Views. New tabs will cycle through these colors, though these can be overridden in the TabbedViewTab instance.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1116,25 +812,11 @@ Array of Colors sets the default background colors of the Composite/Scroll Views
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">colorArray</td>
-
-<td class="argumentdesc">
+| colorArray | 
 
 Array of Colors sets the default label string colors. New tabs will cycle through these colors, though these can be overridden in the TabbedViewTab instance.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1146,25 +828,11 @@ Array of Colors sets the default label string colors. New tabs will cycle throug
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">colorArray</td>
-
-<td class="argumentdesc">
+| colorArray | 
 
 Array of Colors sets the default focused label string colors. New tabs will cycle through these colors, though these can be overridden in the TabbedViewTab instance.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1188,25 +856,11 @@ recalculate all geometry values and redraw tabs
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">int</td>
-
-<td class="argumentdesc">
+| int | 
 
 int or \auto ; a fixed tab width, or "auto" for automatic tab width (default "auto", unless using themes). Can be overridden in in the TabbedViewTab instance.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1218,25 +872,11 @@ int or \auto ; a fixed tab width, or "auto" for automatic tab width (default "au
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">int</td>
-
-<td class="argumentdesc">
+| int | 
 
 if autosizing is on, then this determines left and right padding from the label text. Can be overridden in in the TabbedViewTab instance.
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1248,25 +888,11 @@ if autosizing is on, then this determines left and right padding from the label 
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">int</td>
-
-<td class="argumentdesc">
+| int | 
 
 int or \auto . a fixed tab height, or "auto" for automatic tab height (default "auto", unless using themes)
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1278,25 +904,11 @@ int or \auto . a fixed tab height, or "auto" for automatic tab height (default "
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">int</td>
-
-<td class="argumentdesc">
+| int | 
 
 the radius in pixels of the rounded tab corners
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1308,25 +920,11 @@ the radius in pixels of the rounded tab corners
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">(int)</td>
-
-<td class="argumentdesc">
+| (int) | 
 
 set the size of the clickbox and detach icons in pixels. default is 15
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1338,25 +936,11 @@ set the size of the clickbox and detach icons in pixels. default is 15
 
 #### Arguments:
 
-<table class="arguments">
-
-<tbody>
-
-<tr>
-
-<td class="argumentname">(point)</td>
-
-<td class="argumentdesc">
+| (point) | 
 
 Point ; a multiplication factor for a string/tab width for GUI.swing only. default Point(0.52146,1.25)
 
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+ |
 
 </div>
 
@@ -1727,8 +1311,8 @@ StaticText(~t1t3,Rect(20,60,360,40))
     .string_("- Under QT, I have a detach icon: .useDetachIcon_(true)");
 )</pre>
 
-<div class="doclink">source: [/Users/fuo/Library/Application Support/SuperCollider/downloaded-quarks/TabbedView2/HelpSource/Classes/TabbedView2.schelp](file:///Users/fuo/Library/Application Support/SuperCollider/downloaded-quarks/TabbedView2/HelpSource/Classes/TabbedView2.schelp)  
-link::Classes/TabbedView2::  
+<div class="doclink">source: [/Users/fuo/Library/Application Support/SuperCollider/downloaded-quarks/TabbedView2/HelpSource/Classes/TabbedView2.schelp](file:///Users/fuo/Library/Application Support/SuperCollider/downloaded-quarks/TabbedView2/HelpSource/Classes/TabbedView2.schelp)
+link::Classes/TabbedView2::
 sc version: 3.7.2</div>
 
 </div>
