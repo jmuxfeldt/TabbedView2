@@ -1,26 +1,4 @@
-<div class="contents">
-
-<div class="header">
-
-<div id="label">SuperCollider CLASSES (extension)</div>
-
-<div id="categories">[GUI>Views](./../Browse.html#GUI>Views)</div>
-
-# TabbedView2
-
-<div id="summary">A Tabbed View which holds TabbedViewTabs</div>
-
-</div>
-
-<div class="subheader">
-
-<div id="filename">Source: /Users/fuo/Library/Application Support/SuperCollider/downloaded-quarks/TabbedView2/[TabbedView2.sc](file:///Users/fuo/Library/Application Support/SuperCollider/downloaded-quarks/TabbedView2/TabbedView2.sc)</div>
-
-<div id="superclasses">Inherits from: [Object](../Classes/Object.html)</div>
-
-<div id="related">See also: [TabbedViewTab](./../Classes/TabbedViewTab.html), [CompositeView](./../Classes/CompositeView.html)</div>
-
-</div>
+## TabbedView2
 
 
 ## <a class="anchor" name="description">Description</a>
