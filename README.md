@@ -1,4 +1,6 @@
 # TabbedView2
+A Quark for the SuperCollider porgramming Language
+
 A Tabbed View which holds TabbedViewTabs
 
 
