@@ -679,7 +679,7 @@ TabbedView2{
 	clearAll{
 		tabViews.size.do{ arg x,i;
 			this.removeAt(x)
-		}
+		};
 		tabViews=[];
 	}
 
