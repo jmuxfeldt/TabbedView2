@@ -670,13 +670,19 @@ TabbedView2{
 		this.pr_refreshIndex;
 		if(tabViews.size>0){
 			this.focus(min(tabViews.size-1,focusHistory.index));
-
 			focusHistory=tabViews.at(max(tabViews.size-1,index-1));
 		};
 		this.refresh();
 		view.refresh;
-
 	}
+
+	clearAll{
+		tabViews.size.do{ arg x,i;
+			this.removeAt(x)
+		}
+		tabViews=[];
+	}
+
 
 	pr_refreshIndex{
 
