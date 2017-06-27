@@ -45,11 +45,11 @@ METHOD:: focus
 focus this tab
 METHOD:: remove
 delete this tab from parent
-METHOD::onRemove_
+METHOD::onRemove
 a Function to be performed on remove: {arg thisView; do stuff }
-METHOD::onChangeParent_
+METHOD::onChangeParent
 a Function to be performed right before detach or on dragging to another view: {arg thisView; do stuff...}.
-METHOD::onAfterChangeParent_
+METHOD::onAfterChangeParent
 a Function to be performed right after detach or on dragging to another view: {arg thisView; do stuff...}.
 
 
