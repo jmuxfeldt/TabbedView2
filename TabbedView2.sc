@@ -307,6 +307,7 @@ TabbedView2{
 		if ( tabHeight == \auto ){ tbht = (this.stringBounds("A",font).height+6 )}{tbht=tabHeight};
 		tabViews.do{ arg tab, i;
 			var closable, useDetachIcon, closepadding=0, detachpadding=0, padding= 0 ;
+			tab.pr_setIndex(i);
 			closable = tab.closable;
 			useDetachIcon = tab.useDetachIcon;
 			closable.if{closepadding = clickbox};
