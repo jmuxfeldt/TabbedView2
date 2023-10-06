@@ -30,6 +30,9 @@ PRIVATE:: new
 
 INSTANCEMETHODS::
 SUBSECTION:: Properties
+NOTE::
+You must call .refresh on the parent tabbedView2 for changes to be visible.
+::
 
 METHOD:: widget
 returns:: the UserView which draws the widget
@@ -58,6 +61,9 @@ NOTE::
 These methods override the defaults in TabbedView2.
 
 See LINK::Classes/TabbedView2#Setting Colors::
+
+You must call .refresh on the parent tabbedView2 for changes to be visible.
+
 ::
 METHOD:: labelColor
 METHOD:: unfocusedColor
