@@ -10,7 +10,7 @@ You never instantiate a TabbedViewTab directly, but rather use TabbedView2.add t
 ::
 
 SUBSECTION:: Version and Author
-version: 1.05 , Oct 28, 2016
+version: 1.06 , Aug 3, 2026
 author: Jost Muxfeldt
 
 CLASSMETHODS::

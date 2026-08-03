@@ -869,9 +869,8 @@ TabbedView2{
 
 
 	restoreStateFromArchive{|...args|
-		var tempargs;
+		var tempargs,temp=[];
 		Archive.at(*args).notNil.if{
-			var temp=[];
 			// if the size of tabs has changed, then reset
 			tempargs= args.copy.add(\indexes); // add \indexes to args
 			if (Archive.at(*tempargs).size != this.tabViews.size){
