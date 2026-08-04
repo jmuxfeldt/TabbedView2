@@ -1,4 +1,6 @@
 # TabbedView2
 A Quark for the SuperCollider Programming Language
 
-A feature rich tabbing view. 
+A real swiss army knife of tabbed views. 
+
+![TabbedView2](./TabbedView2.jpg)
