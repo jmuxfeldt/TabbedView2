@@ -269,7 +269,9 @@ TabbedView2{
 
 			'DrawIcon'.asClass.notNil.if{
 				pen.stringCenteredIn("",rect);
-				DrawIcon(label,rect);
+				DrawIcon(label,rect).isNil.if{
+					pen.stringCenteredIn(label,rect);
+				}
 			}{
 				pen.stringCenteredIn(label,rect);
 			}
@@ -286,7 +288,10 @@ TabbedView2{
 		(label.class==Symbol).if{
 			'DrawIcon'.asClass.notNil.if{
 				pen.stringCenteredIn("",rect);
-				DrawIcon(label,rect);
+				DrawIcon(label,rect).isNil.if{
+					pen.stringLeftJustIn(label,rect);
+				};
+
 			}{
 				pen.stringLeftJustIn(label,rect);
 			}
