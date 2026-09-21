@@ -92,7 +92,7 @@ TabbedView2{
 
 
 	// Tab Factory
-	add { arg label,index, scroll=false; //actually this is an insert method with args backwards
+	add{ arg label,index, scroll=false; //actually this is an insert method with args backwards
 		var tab, container, calcTabWidth, i;
 		index = index ? tabViews.size; //if index is nil, add it to the end
 		tab = TabbedViewTab.new(this,label,index,scroll); //bounds are set later
@@ -227,7 +227,7 @@ TabbedView2{
 				pen.font_(font);
 				pen.color_ (strColor);
 				followEdges.if{
-					pen.stringCenteredIn(label,
+					this.pr_drawLabelFollow(pen,label,
 						drawRectText2.moveBy(0,if(tabPosition==\top){1}{0};));
 					tab.userDrawFunction.value(pen,drawRectText2,tabPosition,followEdges);
 					closable.if{
@@ -240,7 +240,7 @@ TabbedView2{
 							drawRectText2.top,clickbox,clickbox));
 					};
 				}{
-					pen.stringLeftJustIn(label,
+					this.pr_drawLabelNoFollow(pen,label,
 						drawRectText.insetAll((labelPadding/2)-2,0,0,0).moveBy(0,1));
 					tab.userDrawFunction.value(pen,drawRectText,tabPosition,followEdges);
 					closable.if{
@@ -258,6 +258,42 @@ TabbedView2{
 		};
 		tabLabelView.refresh;
 	}
+
+	pr_drawLabelFollow{arg pen,label, rect;
+		label.isString.if{
+			pen.stringCenteredIn(label,rect);
+			^nil;
+		};
+
+		(label.class.asString=="Symbol").if{
+
+			'DrawIcon'.asClass.notNil.if{
+				pen.stringCenteredIn("",rect);
+				DrawIcon(label,rect);
+			}{
+				pen.stringCenteredIn(label,rect);
+			}
+			^nil;
+		};
+
+	}
+
+	pr_drawLabelNoFollow{arg pen,label, rect;
+		label.isString.if{
+			pen.stringLeftJustIn(label,rect);
+			^nil;
+		};
+		(label.class==Symbol).if{
+			'DrawIcon'.asClass.notNil.if{
+				pen.stringCenteredIn("",rect);
+				DrawIcon(label,rect);
+			}{
+				pen.stringLeftJustIn(label,rect);
+			}
+			^nil;
+		};
+	}
+
 
 
 	updateFocus{

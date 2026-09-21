@@ -11,7 +11,7 @@ TabbedViewTab : SCViewHolder{
 	<>userDrawFunction,downtmp,<>closeRect,<>detRect,<lock=false,clicks=0,deletelock=true;
 
 	*new {  arg tabbedView,label="label",index,scroll=false;
-		^super.new.init(tabbedView,label.asString,index,scroll);
+		^super.new.init(tabbedView,label,index,scroll);
 
 	}
 	init{arg ...args;

@@ -465,7 +465,9 @@ PRIVATE:: unfocusTabs
 PRIVATE:: closestIndexOf
 PRIVATE:: pr_removeTab
 PRIVATE:: pr_setHandlers
-
+PRIVATE:: pr_drawLabelFollow
+PRIVATE:: pr_drawLabelNoFollow
+PRIVATE:: hasDuplicates
 
 
 PRIVATE::closestIndexOf (x, y)
@@ -743,6 +745,16 @@ v=TabbedView2.new.tabWidth_(70).tabHeight_(13).tabCurve_(0).demo(5);
 TabbedView2.new.tabWidth_(70).tabHeight_(30).demo(5);
 )
 
+SUBSECTION:: Use Icons if wslib is installed
+CODE::
+// if wslib is not installe, symbols are converted to strings.
+t = TabbedView2.newTall(nil,Rect(150,100,400,500));
+t.labelColors_([Color.rand,Color.rand,Color.rand]);
+t.add("String Test");
+t.add('sine');
+t.add('document');
+
+
 ::
 SECTION::Demo
 Execute the code below to test all the features and parameters.
@@ -756,6 +768,8 @@ w=Window.new("TabbedView Examples").front.setTopLeftBounds(Rect(50,50,1050,700))
 ~t1t1= ~t1v.add("Tab 1.1");
 ~t1t2= ~t1v.add("Tab 1.2").closable_(true);
 ~t1t3= ~t1v.add("Tab 1.3").useDetachIcon_(true);
+~t1t4= ~t1v.add('sine').useDetachIcon_(true);
+
 
 
 ~t2v=TabbedView2.newTall(w.view, Rect(550,50,450,600));
@@ -798,6 +812,9 @@ StaticText(w,Rect(0,0,360,22)).string_(" TabbedView2 color variables:").backgrou
 StaticText(w,Rect(0,0,360,88)).string_("Use the same variable names as above, but in plural, to set defaults before adding tabs. All default colors are set as arrays of colors, and tabs cylcle though the colors upon being created.");
 },~t1t1.bounds.insetBy(15,0));
 
+~t1t4.flow({|w|
+	StaticText(w,Rect(0,0,300,50)).string_("Using wslib quark, your tab labels can be icons by using an icon symbole('sine'). Otherwise they are converted to strings.");
+},~t1t4.bounds.insetBy(15,0));
 
 ~t2t1.flow({arg w;
 	Button(w,Rect(0,0,360,22))
