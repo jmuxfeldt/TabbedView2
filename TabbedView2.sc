@@ -39,6 +39,7 @@ TabbedView2{
 	<pen,
 	>closeIcon,
 	>detachIcon,
+	labelAlign=\auto,
 	left = 0, // probably obsolete
 	top  = 0 // probably obsolete
 	;
@@ -227,7 +228,7 @@ TabbedView2{
 				pen.font_(font);
 				pen.color_ (strColor);
 				followEdges.if{
-					this.pr_drawLabelFollow(pen,label,
+					this.pr_drawLabelFollow(tab, pen,label,
 						drawRectText2.moveBy(0,if(tabPosition==\top){1}{0};));
 					tab.userDrawFunction.value(pen,drawRectText2,tabPosition,followEdges);
 					closable.if{
@@ -240,8 +241,8 @@ TabbedView2{
 							drawRectText2.top,clickbox,clickbox));
 					};
 				}{
-					this.pr_drawLabelNoFollow(pen,label,
-						drawRectText.insetAll((labelPadding/2)-2,0,0,0).moveBy(0,1));
+					this.pr_drawLabelNoFollow(tab,pen,label,
+						drawRectText.moveBy(0,1));
 					tab.userDrawFunction.value(pen,drawRectText,tabPosition,followEdges);
 					closable.if{
 						closeIcon.value( pen,
@@ -258,46 +259,72 @@ TabbedView2{
 		};
 		tabLabelView.refresh;
 	}
+	labelAlign_{|v =\auto|
+		labelAlign=v;
+		this.refresh;
+	}
 
-	pr_drawLabelFollow{arg pen,label, rect;
+	pr_drawLabelFollow{arg tab,pen,label, rect;
+		var func, offs1=0, offs2=0;
+		tab.useDetachIcon.if{offs1=12};
+		tab.closable.if{offs2=12};
+		switch(labelAlign)
+		{\left}{func=\stringLeftJustIn;rect=rect.left_(rect.left+5)}
+		{\right}{func=\stringRightJustIn;rect=rect.width_(rect.width-5-offs1-offs2)}
+		{\center}{func=\stringCenteredIn}
+		{func=\stringCenteredIn};
+
+
+
 		label.isString.if{
-			pen.stringCenteredIn(label,rect);
+			pen.perform(func,label,rect);
 			^nil;
 		};
 
 		(label.class.asString=="Symbol").if{
 
 			'DrawIcon'.asClass.notNil.if{
-				pen.stringCenteredIn("",rect);
+				pen.perform(func,"",rect);
 				DrawIcon(label,rect).isNil.if{
-					pen.stringCenteredIn(label,rect);
+					pen.perform(func,label,rect);
 				}
 			}{
-				pen.stringCenteredIn(label,rect);
+				pen.perform(func,label,rect);
 			}
 			^nil;
 		};
 
 	}
 
-	pr_drawLabelNoFollow{arg pen,label, rect;
+	pr_drawLabelNoFollow{arg tab,pen,label, rect;
+		var func, offs1=0, offs2=0;
+		tab.useDetachIcon.if{offs1=12};
+		tab.closable.if{offs2=12};
+
+		switch(labelAlign)
+		{\left}{func=\stringLeftJustIn;rect=rect.left_(rect.left+5)}
+		{\right}{func=\stringRightJustIn;rect=rect.width_(rect.width-5-offs1-offs2)}
+		{\center}{func=\stringCenteredIn}
+		{func=\stringLeftJustIn;rect=rect.left_(rect.left+5)};
+
 		label.isString.if{
-			pen.stringLeftJustIn(label,rect);
+			pen.perform(func,label,rect);
 			^nil;
 		};
 		(label.class==Symbol).if{
 			'DrawIcon'.asClass.notNil.if{
-				pen.stringCenteredIn("",rect);
+				pen.perform(func,"",rect);
 				DrawIcon(label,rect).isNil.if{
-					pen.stringLeftJustIn(label,rect);
+					pen.perform(func,label,rect);
 				};
 
 			}{
-				pen.stringLeftJustIn(label,rect);
+				pen.perform(func,label,rect);
 			}
 			^nil;
 		};
 	}
+
 
 
 
