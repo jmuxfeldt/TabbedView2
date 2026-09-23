@@ -242,7 +242,8 @@ TabbedView2{
 					};
 				}{
 					this.pr_drawLabelNoFollow(tab,pen,label,
-						drawRectText.moveBy(0,1));
+						drawRectText);
+
 					tab.userDrawFunction.value(pen,drawRectText,tabPosition,followEdges);
 					closable.if{
 						closeIcon.value( pen,
@@ -314,7 +315,14 @@ TabbedView2{
 		(label.class==Symbol).if{
 			'DrawIcon'.asClass.notNil.if{
 				pen.perform(func,"",rect);
+				(func==\stringLeftJustIn).if{
+					rect=rect.left_(rect.left-5);
+				};
 				DrawIcon(label,rect).isNil.if{
+					(func==\stringLeftJustIn).if{
+						rect=rect.left_(rect.left+5);
+					};
+
 					pen.perform(func,label,rect);
 				};
 

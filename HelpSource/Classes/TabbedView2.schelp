@@ -329,7 +329,7 @@ Automatically saves the state of the TabbedView2 to given path in the Archive.
 NOTE::
 If the number of saved \indexes is different than the number of tabs, the saved \indexes array will be ignored and reset.
 ::
-ARGUMENT:: symbols
+ARGUMENT:: ...args
 symbol1, symbol2, symbol3, ...
 CODE::
 v=TabbedView2.new;
