@@ -12,7 +12,6 @@ TabbedViewTab : SCViewHolder{
 
 	*new {  arg tabbedView,label="label",index,scroll=false;
 		^super.new.init(tabbedView,label,index,scroll);
-
 	}
 	init{arg ...args;
 		var tab, calcTabWidth,scroll,rotateRect;
@@ -26,7 +25,8 @@ TabbedViewTab : SCViewHolder{
 		userDrawFunction = {|pen,drawRect,tabPosition,followEdges|};
 
 		scroll.if{
-			this.view = context.scrollView.new(tabbedView.view).resize_(5)
+			this.view = context.scrollView.new(tabbedView.view).resize_(5).hasBorder_(false);
+
 		}{
 			this.view = context.compositeView
 			.new(tabbedView.view,tabbedView.view.bounds).resize_(5)
